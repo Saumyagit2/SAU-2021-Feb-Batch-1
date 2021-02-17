@@ -1,0 +1,21 @@
+Q5. Difference between '==' and '===' operators:
+Ans:
+
+'==' operators just checks the values of two operands not their datatypes.So,if the values are equal even though the datatypes don't match It will return as true .
+eg:
+var a=5;
+var b='5';
+var c=5;
+a==b;
+true
+a==c
+true
+
+
+'===' operators not only checks the values of two operands but also their datatypes.So,if the values and the datatypes matches It will return as true else false .
+eg:
+
+a===b
+false
+a===c
+true

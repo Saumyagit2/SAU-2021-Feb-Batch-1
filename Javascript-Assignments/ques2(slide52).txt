@@ -1,0 +1,17 @@
+var add = (function () { 
+var cnt = 0;
+return function() {return cnt+=1;};
+})();
+add();
+add();
+add();
+....................................
+Output-:1
+	2
+	3
+EXPLANATION-
+The variable add here is returning the value of a self involing function which runs only once.
+So,this self invoking function is every time setting cnt value as 0 and returns
+a function expression i.e, cnt+=1.Hence,every time add() is invoked it takes the previous value and add 1 to it and 
+thus returns the incremented value of cnt by 1. eg.1,2,3...and so on each time add() is called.
+Basically cnt behaves like a private variable which we can't access without calling the add() function.

@@ -1,0 +1,32 @@
+// Q. function to check if the input string matches with any of the following conditions:
+//1.String starts with lion
+//2.String ends with cat
+//3.string has abc in between (b can be 'n' no. of times, n>=1)
+.........................................................................
+
+function check(str){
+console.log("the user input string is: ",str)
+var result = str.match(/^lion/);
+var result2=str.match(/cat$/);
+var result3=str.match(/ab+c/g);
+var r=str.match(/ab/);
+if(result)
+{
+console.log("found lion at index",result.index);
+}
+if(result2){
+console.log("found cat at index",result2.index);
+}
+if(result3)
+{
+console.log("found abc at index",r.index);
+}
+else
+{
+console.log("the substring doesn't match with input string!!");
+}
+}
+
+//calling the function check:
+
+check(prompt("enter the string to check regex"));

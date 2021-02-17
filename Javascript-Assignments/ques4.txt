@@ -1,0 +1,22 @@
+Type a function which takes array as input:
+a) Sorts it in ascending order
+b)Multiply each numbers by 10
+c)Returns those numbers which are divisible by 3 
+.........................................................
+
+var inputArray = [];
+var size = 5;
+for(var i=0; i<size; i++) {
+	inputArray[i] = prompt('Enter Element ' + (i+1));
+}
+function myfunc(array) {
+var a=array.sort();
+var b=a.map((item) => { return item * 10;});
+var c=b.filter((item)=>{return (item%3==0)});
+console.log(c);
+}
+console.log(inputArray);
+myfunc(inputArray); 
+.......................................
+inputArray=["10", "20", "3", "6", "7"]
+Output=[30,60]
